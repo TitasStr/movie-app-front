@@ -1,6 +1,6 @@
 # TypeScript React movie-app-front Readme
 
-##Running the Client
+## Running the Client
 
 1. Open a new terminal and navigate to the client folder of the project.
 
