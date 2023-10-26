@@ -1,0 +1,6 @@
+# Ignore node_modules for the frontend
+node_modules/
+
+# Ignore compiled TypeScript files
+*.js
+*.js.map
