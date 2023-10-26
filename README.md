@@ -1,4 +1,4 @@
-     TypeScript React movie-app-front Readme
+# TypeScript React movie-app-front Readme
 
 ##Running the Client
 
