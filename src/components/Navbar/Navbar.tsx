@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { useDispatch, useSelector } from 'react-redux';
 import { type AppDispatch, type RootState } from '../../store';
 import { logout } from '../../features/auth/authSlice';
 import styles from './Navbar.module.scss';
 import React from 'react';
+
 const Navbar = (): JSX.Element => {
   const { isAuth, username } = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch<AppDispatch>();

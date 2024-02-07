@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 
 const root = ReactDOM.createRoot(
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   document.getElementById('root')!,
 );
 root.render(

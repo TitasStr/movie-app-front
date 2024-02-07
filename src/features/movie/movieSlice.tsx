@@ -1,10 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { type Movie } from '../../utils/interfaces';
-
-interface MovieState {
-  movies: Movie[];
-  searchTerm: string;
-}
+import { type MovieState } from '../../utils/interfaces';
 
 const initialState: MovieState = {
   movies: [],

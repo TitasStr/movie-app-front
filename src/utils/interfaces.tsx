@@ -18,3 +18,8 @@ export interface SetAuthPayload {
   isAuth: boolean;
   username: string;
 }
+
+export interface MovieState {
+  movies: Movie[];
+  searchTerm: string;
+}
