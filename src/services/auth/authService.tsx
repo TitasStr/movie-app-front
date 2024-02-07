@@ -1,9 +1,9 @@
-import { API_URL } from '../../constants';
+import { AUTH_API_URL, LOG_ROUTE, REG_ROUTE, TOKEN } from '../../constants';
 import { type User } from '../../interfaces';
 
 export async function loginService(user: User): Promise<void> {
   const { username, password } = user;
-  const response = await fetch(`${API_URL}/auth/login`, {
+  const response = await fetch(`${AUTH_API_URL}${LOG_ROUTE}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -18,12 +18,12 @@ export async function loginService(user: User): Promise<void> {
     else throw errorData;
   }
   const token = await response.text();
-  localStorage.setItem('token', token);
+  localStorage.setItem(TOKEN, token);
 }
 
 export async function registerService(user: User): Promise<void> {
   const { username, password } = user;
-  const response = await fetch(`${API_URL}/auth/register`, {
+  const response = await fetch(`${AUTH_API_URL}${REG_ROUTE}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -38,12 +38,12 @@ export async function registerService(user: User): Promise<void> {
 }
 
 export async function statusService(): Promise<string> {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem(TOKEN);
   if (token == null) {
     throw new Error('No token found');
   }
 
-  const response = await fetch(`${API_URL}/auth/status`, {
+  const response = await fetch(`${AUTH_API_URL}/status`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
