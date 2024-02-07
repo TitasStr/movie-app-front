@@ -20,7 +20,7 @@ const RegisterForm = (): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
-    setInputs((prevInputs) => ({
+    setInputs((prevInputs: User) => ({
       ...prevInputs,
       [name]: value,
     }));

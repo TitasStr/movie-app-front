@@ -24,7 +24,7 @@ const AppRouter = (): JSX.Element => {
       try {
         const userData: string = await statusService();
         dispatch(setAuth({ isAuth: true, username: userData }));
-      } catch (err: any) {
+      } catch (err) {
         dispatch(logout());
       }
     };
@@ -37,8 +37,8 @@ const AppRouter = (): JSX.Element => {
     <>
       <Router>
         <Routes>
-        <Route
-            path='/'
+          <Route
+            path="/"
             element={isAuth ? <Dashboard /> : <Navigate to={LOG_ROUTE} />}
           />
           <Route
