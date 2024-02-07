@@ -24,10 +24,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --quiet --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "pc": "npm lint --fix && npm format"
+    "pc": "npm run lint -- --fix && npm run format"
   },
   "eslintConfig": {
     "extends": [
