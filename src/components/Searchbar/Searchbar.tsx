@@ -1,11 +1,10 @@
-import React from "react";
-
+import React from 'react';
+import styles from './Searchbar.module.scss';
 const Searchbar = (): JSX.Element => {
   return (
-    <div>
+    <div className={styles.containerSearchbar}>
       <h2>Search for Movies</h2>
-      <input
-      />
+      <input className={styles.searchBarInput} />
     </div>
   );
 };
