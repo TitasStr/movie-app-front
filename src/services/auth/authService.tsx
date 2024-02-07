@@ -1,5 +1,10 @@
-import { AUTH_API_URL, LOG_ROUTE, REG_ROUTE, TOKEN } from '../../constants';
-import { type User } from '../../interfaces';
+import {
+  AUTH_API_URL,
+  LOG_ROUTE,
+  REG_ROUTE,
+  TOKEN,
+} from '../../utils/constants';
+import { type User } from '../../utils/interfaces';
 
 export async function loginService(user: User): Promise<void> {
   const { username, password } = user;
