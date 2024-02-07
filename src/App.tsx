@@ -4,6 +4,7 @@ import LoginForm from './components/LoginForm/LoginForm';
 import Navbar from './components/Navbar/Navbar';
 import Searchbar from './components/Searchbar/Searchbar';
 import MovieCard from './components/MovieCard/MovieCard';
+
 function App(): JSX.Element {
   return (
     <>
