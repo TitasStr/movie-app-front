@@ -1,11 +1,17 @@
 import React from 'react';
 import styles from './MovieCard.module.scss';
 
-const MovieCard = (): JSX.Element => {
+interface MovieCardProps{
+    title: string;
+    imageUrl: string;
+}
+
+const MovieCard = (props: MovieCardProps): JSX.Element => {
+    const { title, imageUrl } = props;
   return (
     <div className={styles.containerCard}>
-      <img className={styles.cardImage} src="" alt="Image" />
-      <div className={styles.cardTitle}>Image title</div>
+      <img className={styles.cardImage} src={imageUrl} alt={title} />
+      <div className={styles.cardTitle}>{title}</div>
     </div>
   );
 };
