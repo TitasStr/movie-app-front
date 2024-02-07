@@ -1,30 +1,30 @@
 module.exports = {
-    env: {
-      browser: true,
-      es2021: true,
-    },
-    extends: ['standard-with-typescript', 'plugin:react/recommended', 'prettier'],
-    overrides: [
-      {
-        env: {
-          node: true,
-        },
-        files: ['.eslintrc.{js,cjs}'],
-        parserOptions: {
-          sourceType: 'script',
-        },
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['standard-with-typescript', 'plugin:react/recommended', 'prettier'],
+  overrides: [
+    {
+      env: {
+        node: true,
       },
-    ],
-    parserOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-    plugins: ['react'],
-    settings: {
-      react: {
-        version: 'detect',
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
       },
     },
-    ignorePatterns: ['build/static/js/'],
-    rules: {},
-  };
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  ignorePatterns: ['build/static/js/'],
+  rules: {},
+};

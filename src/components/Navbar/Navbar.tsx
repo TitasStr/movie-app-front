@@ -1,7 +1,7 @@
-import React from "react"
-import styles from "./Navbar.module.scss"
+import React from 'react';
+import styles from './Navbar.module.scss';
 
-const Navbar =(): JSX.Element => {
+const Navbar = (): JSX.Element => {
   return (
     <nav className={styles.containerNavbar}>
       <p className={styles.navTitle}>MovieNest</p>
@@ -11,6 +11,6 @@ const Navbar =(): JSX.Element => {
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
