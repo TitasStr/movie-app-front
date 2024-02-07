@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import styles from './MovieCard.module.scss';
 
 const MovieCard = (): JSX.Element => {
   return (
-    <div>
-      <img src='' alt='Image' />
-      <div >Image title</div>
+    <div className={styles.containerCard}>
+      <img className={styles.cardImage} src="" alt="Image" />
+      <div className={styles.cardTitle}>Image title</div>
     </div>
   );
 };

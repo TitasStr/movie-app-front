@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.containerCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px $color-shadow;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cardTitle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $color-background;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
