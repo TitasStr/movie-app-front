@@ -1,0 +1,49 @@
+@import "../../variables";
+
+.containerForm {
+  padding-top: 5%;
+  @include flexCenter(column);
+  width: 100%;
+  .form {
+    @include flexCenter(column);
+    width: 20rem;
+    height: 30rem;
+    border-radius: 1%;
+    box-shadow: 0 4px 8px $color-shadow;
+    border: 0.1rem solid $color-border;
+  }
+  .formTitle {
+    margin-bottom: 1rem;
+  }
+  .formInput {
+    margin-bottom: 1rem;
+    outline: none;
+    border: 0.1rem solid $color-border;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 70%;
+    transition: 0.2s;
+    &:focus {
+      box-shadow: 0 2px 4px $color-shadow;
+      transform: scale(1.02);
+    }
+  }
+  .formButton {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color: $color-background;
+    outline: none;
+    border: 0.1rem solid $color-border;
+    width: 40%;
+    height: 5%;
+    border-radius: 1rem;
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 0 2px 4px $color-shadow;
+      transform: scale(1.02);
+    }
+  }
+  .formInfo {
+    color: $color-info;
+  }
+}
