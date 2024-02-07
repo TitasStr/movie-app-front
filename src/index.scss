@@ -1,0 +1,16 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: $color-text;
+}
+
+body {
+  background-color: $color-background;
+  font-family: "Poppins", sans-serif;
+}
+
+#root {
+  height: 100%;
+}
