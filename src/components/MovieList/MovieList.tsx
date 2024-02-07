@@ -12,7 +12,7 @@ const MovieList = (): JSX.Element => {
 
   useEffect(() => {
     const loadMovies = async (): Promise<void> => {
-      const fetchedMovies: Movie[] = await fetchMovies(searchTerm);
+      const fetchedMovies: Movie[] = await fetchMovies(searchTerm as string);
       setMovies(fetchedMovies);
     };
 
