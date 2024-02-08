@@ -33,7 +33,7 @@ const RegisterForm = (): JSX.Element => {
       .then(() => {
         navigate(LOG_ROUTE);
       })
-      .catch((err: any) => {
+        .catch((err) => {
         const errorMessagesArray = Array.isArray(err) ? err : [err];
         setErrorMessages(errorMessagesArray);
       });

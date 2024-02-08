@@ -17,7 +17,6 @@ export async function loginService(user: User): Promise<void> {
   });
 
   if (!response.ok) {
-    console.log(response);
     const errorData = await response.json();
     if (errorData.message != null) throw errorData.message;
     else throw errorData;
@@ -28,6 +27,7 @@ export async function loginService(user: User): Promise<void> {
 
 export async function registerService(user: User): Promise<void> {
   const { username, password } = user;
+
   const response = await fetch(`${AUTH_API_URL}${REG_ROUTE}`, {
     method: 'POST',
     headers: {
@@ -35,7 +35,7 @@ export async function registerService(user: User): Promise<void> {
     },
     body: JSON.stringify({ username, password }),
   });
-
+  
   if (!response.ok) {
     const errorData = await response.json();
     throw errorData.message;
